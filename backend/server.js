@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 4000;
 const cors = require('cors');
 
 // Importing Schema
@@ -11,23 +11,23 @@ mongoose.connection.on('error', err => console.log(err.message + ' is mongo not 
 mongoose.connection.on('disconnected', () => console.log('mongoose is disconnected'));
 
 // mongoose connection
-mongoose.connect('mongodb://localhost:27017/animals', { useNewUrlParser: true });
-mongoose.connection.once('open', () => console.log('connected to mongoose'))
+mongoose.connect('mongodb://localhost:27017/sanctuary', {useNewUrlParser: true});
+mongoose.connection.once('open', () => console.log('Connected to Mongoose!'))
 
 // middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 
 // cors
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:4000']
 const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
+    origin: function (origin, callback) {
+        if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true)
+        } else {
+            callback(new Error('Not allowed by CORS'))
+        }
     }
-  }
 }
 
 app.use(cors(corsOptions))
@@ -40,5 +40,5 @@ app.use(cors(corsOptions))
 
 
 app.listen(PORT, () => {
-  console.log(`PORT: ${PORT}`);
+    console.log(`PORT: ${PORT}`);
 })
