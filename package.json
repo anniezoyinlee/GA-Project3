@@ -1,0 +1,23 @@
+{
+  "name": "ga-project3",
+  "version": "1.0.0",
+  "description": "Trent Sanders Safa Nasirli Annie Lee Christina Whethers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anniezoyinlee/GA-Project3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anniezoyinlee/GA-Project3/issues"
+  },
+  "homepage": "https://github.com/anniezoyinlee/GA-Project3#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
