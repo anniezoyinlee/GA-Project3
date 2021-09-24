@@ -1,7 +1,11 @@
 {
   "name": "ga-project3",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "Trent Sanders",
+=======
+  "description": "Trent Sanders Safa Nasirli Annie Lee Christina Whethers",
+>>>>>>> f8967c774b0c542c29fae70e7e5af85d86ced728
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +22,11 @@
   },
   "homepage": "https://github.com/anniezoyinlee/GA-Project3#readme",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^4.17.1",
     "exprss": "^0.0.1-security"
+=======
+    "express": "^4.17.1"
+>>>>>>> f8967c774b0c542c29fae70e7e5af85d86ced728
   }
 }
