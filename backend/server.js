@@ -17,12 +17,6 @@ app.use('/api/pokemons', pokemonController);
 // cors
 app.use(cors())
 
-// Importing seeds
-
-// seed route
-
-
-
 app.set("port", process.env.PORT || 4000)
 app.listen(app.get("port"), () => {
     console.log("Listening on Port" + app.get("port"))
