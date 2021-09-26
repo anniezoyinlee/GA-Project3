@@ -2,7 +2,7 @@
 
 ## Project Name
 PokeMon Sanctuary
-[Click to check the app!](https://pokemon-sanctuary.herokuapp.com/)
+>[Click to check the app!](https://pokemon-sanctuary.herokuapp.com/)
 
 ## Scrum master
 Trent Sanders
