@@ -8,12 +8,19 @@ router.get('/', (req, res) => {
 });
 
 // SHOW
-router.get('/:id', handleValidateId, (req, res) => {
-  Pokemon.findById(req.params.id).then((pokemon) => res.json(pokemon));
+router.get('/:id', (req, res) => {
+  Pokemon.findById(req.params.id)
+    .then(pokemon => {
+      if (!pokemon) {
+        res.sendStatus(404);
+      } else {
+        res.json(pokemon);
+      }
+    });
 });
 
 // CREATE
-router.post('/', requireToken, (req, res) => {
+router.post('/', (req, res) => {
   Pokemon.create(req.body).then((pokemon) => res.json(pokemon));
 });
 
@@ -23,14 +30,25 @@ router.put('/:id', (req, res) => {
     { _id: req.params.id }, 
     req.body, 
     {new: true,})
-      .then((pokemon) => res.json(pokemon));
+      .then((pokemon) => {
+        if (!pokemon) {
+          res.sendStatus(404);
+        } else {
+          res.json(pokemon);
+        }
+      });
 });
 
 // DESTROY
-// DELETE api/pokemons/5a7db6c74d55bc51bdf39793
 router.delete('/:id', (req, res) => {
   Pokemon.findOneAndDelete({_id: req.params.id,})
-      .then((pokemon) => res.json(pokemon));
+    .then(pokemon => {
+      if (!pokemon) {
+        res.sendStatus(404);
+      } else {
+        res.sendStatus(204);
+      }
+    });
 });
 
 module.exports = router;
