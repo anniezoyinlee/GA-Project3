@@ -8,8 +8,8 @@ PokeMon Sanctuary
 Trent Sanders
 
 ## Team Members
-Annie Lee
-Christina Whether
+Annie Lee  
+Christina Whether  
 Safa Nasirli
 
 ## Project Description
