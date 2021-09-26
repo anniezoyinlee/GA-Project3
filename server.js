@@ -9,13 +9,21 @@ const pokemonController = require('./controllers/pokemons');
 
 // middleware
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({
+    extended: true
+}));
 
 // Configure the route middleware
 app.use('/api/pokemons', pokemonController);
 
 // cors
 app.use(cors())
+
+// Sample homepage
+
+app.get("/", (req, res, next) => {
+    res.send("Hello World!")
+})
 
 app.set("port", process.env.PORT || 4000)
 app.listen(app.get("port"), () => {
