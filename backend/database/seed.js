@@ -1,5 +1,5 @@
-const Pokemon = require("../models/Pokemon")
-const seedData = require("./seeds.json")
+const Pokemon = require("../models/Pokemon");
+const seedData = require("./seeds.json");
 
 Pokemon.deleteMany()
     .then(() => Pokemon.insertMany(seedData))
