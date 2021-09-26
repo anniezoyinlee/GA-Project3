@@ -8,12 +8,12 @@ router.get('/', (req, res) => {
 });
 
 // SHOW
-router.get('/:id', handleValidateId, (req, res) => {
+router.get('/:id', (req, res) => {
   Pokemon.findById(req.params.id).then((pokemon) => res.json(pokemon));
 });
 
 // CREATE
-router.post('/', requireToken, (req, res) => {
+router.post('/', (req, res) => {
   Pokemon.create(req.body).then((pokemon) => res.json(pokemon));
 });
 
