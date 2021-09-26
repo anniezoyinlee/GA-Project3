@@ -1,4 +1,4 @@
-const mongoose = require("../database/connection")
+const mongoose = require("../database/connection");
 
 const userSchema = new mongoose.Schema(
     {
@@ -21,4 +21,4 @@ const userSchema = new mongoose.Schema(
     }
 )
 
-module.exports = mongoose.model("User", userSchema)
+module.exports = mongoose.model("User", userSchema);
