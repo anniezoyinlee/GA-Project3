@@ -40,7 +40,6 @@ router.put('/:id', (req, res) => {
 });
 
 // DESTROY
-// DELETE api/pokemons/5a7db6c74d55bc51bdf39793
 router.delete('/:id', (req, res) => {
   Pokemon.findOneAndDelete({_id: req.params.id,})
     .then(pokemon => {
