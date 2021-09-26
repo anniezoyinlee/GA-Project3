@@ -1,4 +1,4 @@
-const mongoose = require("../database/connection")
+const mongoose = require("../database/connection");
 
 const pokemonSchema = new mongoose.Schema({
     name: {
@@ -22,4 +22,4 @@ const pokemonSchema = new mongoose.Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model("Pokemon", pokemonSchema)
+module.exports = mongoose.model("Pokemon", pokemonSchema); 
