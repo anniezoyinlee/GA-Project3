@@ -1,10 +1,7 @@
 # General Assembly - Project 3
 
-@benmanning @JohnAJacobs 
-
 ## Project Name
 PokeMon Sanctuary
-<!-- [Click to check the app!](link to heroku) -->
 
 ## Scrum master
 Trent Sanders
