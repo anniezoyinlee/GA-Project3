@@ -1,4 +1,7 @@
 const express = require('express');
+const {
+  requireToken
+} = require('../middleware/auth');
 const Pokemon = require('../models/Pokemon');
 const router = express.Router();
 
@@ -23,7 +26,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 // CREATE
-router.post('/', (req, res, next) => {
+router.post('/', requireToken, (req, res, next) => {
   Pokemon.create(req.body)
     .then((pokemon) => res.status(201).json(pokemon))
     .catch(next);
@@ -31,9 +34,11 @@ router.post('/', (req, res, next) => {
 
 // UPDATE
 router.put('/:id', (req, res, next) => {
-  Pokemon.findOneAndUpdate({ _id: req.params.id }, req.body, {
-    new: true,
-  })
+  Pokemon.findOneAndUpdate({
+      _id: req.params.id
+    }, req.body, {
+      new: true,
+    })
     .then((pokemon) => {
       if (!pokemon) {
         res.sendStatus(404);
@@ -47,8 +52,8 @@ router.put('/:id', (req, res, next) => {
 // DESTROY
 router.delete('/:id', (req, res, next) => {
   Pokemon.findOneAndDelete({
-    _id: req.params.id,
-  })
+      _id: req.params.id,
+    })
     .then((pokemon) => {
       if (!pokemon) {
         res.sendStatus(404);
