@@ -5,6 +5,7 @@ const Pokemon = require("./models/Pokemon");
 const seedData = require("./database/seeds.json");
 
 // controllers
+const userController = require('./controllers/users');
 const pokemonController = require('./controllers/pokemons');
 
 // middleware
@@ -14,6 +15,7 @@ app.use(express.urlencoded({
 }));
 
 // Configure the route middleware
+app.use('/api', userController);
 app.use('/api/pokemons', pokemonController);
 
 // cors
