@@ -20,7 +20,7 @@ router.post('/signup', (req, res, next) => {
     .then(user => User.create(user))
     .then(user => res.status(201).json(user))
     .catch(next)
-})
+});
 
 // SIGN IN
 router.post('/signin', (req, res, next) => {
