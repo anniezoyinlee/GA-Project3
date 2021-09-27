@@ -1,23 +1,20 @@
 const express = require('express');
 const Pokemon = require('../models/Pokemon');
+const { handleValidateId, handleRecordExists } = require('../middleware/custom_errors');
 const router = express.Router();
 
 // INDEX
 router.get('/', (req, res, next) => {
   Pokemon.find()
     .then((pokemons) => res.json(pokemons))
-    .catch(next);
 });
 
 // SHOW
-router.get('/:id', (req, res, next) => {
+router.get('/:id', handleValidateId, (req, res, next) => {
   Pokemon.findById(req.params.id)
+    .then(handleRecordExists)
     .then((pokemon) => {
-      if (!pokemon) {
-        res.sendStatus(404);
-      } else {
-        res.json(pokemon);
-      }
+      res.json(pokemon);
     })
     .catch(next);
 });
@@ -30,31 +27,25 @@ router.post('/', (req, res, next) => {
 });
 
 // UPDATE
-router.put('/:id', (req, res, next) => {
+router.put('/:id', handleValidateId, (req, res, next) => {
   Pokemon.findOneAndUpdate({ _id: req.params.id }, req.body, {
     new: true,
   })
+    .then(handleRecordExists)
     .then((pokemon) => {
-      if (!pokemon) {
-        res.sendStatus(404);
-      } else {
-        res.json(pokemon);
-      }
+      res.json(pokemon);
     })
     .catch(next);
 });
 
 // DESTROY
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', handleValidateId, (req, res, next) => {
   Pokemon.findOneAndDelete({
     _id: req.params.id,
   })
+    .then(handleRecordExists)
     .then((pokemon) => {
-      if (!pokemon) {
-        res.sendStatus(404);
-      } else {
-        res.sendStatus(204);
-      }
+      res.sendStatus(204);
     })
     .catch(next);
 });
