@@ -8,6 +8,9 @@ const seedData = require("./database/seeds.json");
 const userController = require('./controllers/users');
 const pokemonController = require('./controllers/pokemons');
 
+// Require the error handlers
+const { handleErrors, handleValidationErrors } = require('./middleware/custom_errors');
+
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({
@@ -30,12 +33,9 @@ app.get("/", (req, res, next) => {
     res.send("Hello World!")
 });
 
-//Error handler
-app.use((err, req, res, next) => {
-    const statusCode = err.statusCode || 500
-    const message = err.message || "Internal Server Error"
-    res.status(statusCode).send(message)
-})
+// Handling Errors 
+app.use(handleValidationErrors);
+app.use(handleErrors);
 
 app.set("port", process.env.PORT || 4000)
 app.listen(app.get("port"), () => {
