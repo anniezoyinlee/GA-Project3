@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const Pokemon = require("./models/Pokemon");
+const User = require("./models/User")
 const seedData = require("./database/seeds.json");
 
 // controllers
@@ -9,7 +10,10 @@ const userController = require('./controllers/users');
 const pokemonController = require('./controllers/pokemons');
 
 // Require the error handlers
-const { handleErrors, handleValidationErrors } = require('./middleware/custom_errors');
+const {
+    handleErrors,
+    handleValidationErrors
+} = require('./middleware/custom_errors');
 
 // middleware
 app.use(express.json());
@@ -28,8 +32,12 @@ app.use(cors());
 app.get("/", (req, res, next) => {
     Pokemon.deleteMany()
         .then(() => Pokemon.insertMany(seedData))
-        .then(console.log)
-        .catch(console.error)
+        .then(() => Pokemon.updateMany({}, {
+            "$set": {
+                owner: "61526cf1fe14bc2bf5b7dfce"
+            }
+        }))
+    // .then(console.log)
     res.send("Hello World!")
 });
 
