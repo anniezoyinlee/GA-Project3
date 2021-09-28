@@ -1,8 +1,37 @@
-const Pokemon = require("../models/Pokemon");
-const seedData = require("./seeds.json");
+const User = require('../models/User');
+const Pokemon = require('../models/Pokemon');
+const seedData = require('./seeds.json');
+
+const getUser = async () => {
+    try {
+        if (!process.argv[2]) {
+            throw new Error(
+                'To seed the database provide an email address for an existing user'
+            );
+        }
+        const user = await User.findOne({
+            email: process.argv[2]
+        });
+        if (!user) {
+            throw new Error('No matching user found!');
+        }
+        return user;
+    } catch (error) {
+        console.error(error);
+    }
+};
 
 Pokemon.deleteMany()
-    .then(() => Pokemon.insertMany(seedData))
+    .then(getUser)
+    .then((user) => {
+        const seedDataWithOwner = seedData.map((pokemon) => {
+            pokemon.owner = user._id;
+            return pokemon;
+        });
+        return Pokemon.insertMany(seedDataWithOwner);
+    })
     .then(console.log)
-    .catch(console.error)
-    .finally(process.exit)
+    .then(console.error)
+    .finally(() => {
+        process.exit();
+    });
