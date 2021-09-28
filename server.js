@@ -9,7 +9,10 @@ const userController = require('./controllers/users');
 const pokemonController = require('./controllers/pokemons');
 
 // Require the error handlers
-const { handleErrors, handleValidationErrors } = require('./middleware/custom_errors');
+const {
+    handleErrors,
+    handleValidationErrors
+} = require('./middleware/custom_errors');
 
 // middleware
 app.use(express.json());
@@ -26,10 +29,10 @@ app.use(cors());
 
 // Sample homepage
 app.get("/", (req, res, next) => {
-    Pokemon.deleteMany()
-        .then(() => Pokemon.insertMany(seedData))
-        .then(console.log)
-        .catch(console.error)
+    // Pokemon.deleteMany()
+    //     .then(() => Pokemon.insertMany(seedData))
+    //     .then(console.log)
+    //     .catch(console.error)
     res.send("Hello World!")
 });
 

@@ -17,9 +17,14 @@ const pokemonSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
+    }
     // reviews: [String]
 }, {
     timestamps: true
 })
 
-module.exports = mongoose.model("Pokemon", pokemonSchema); 
+module.exports = mongoose.model("Pokemon", pokemonSchema);
