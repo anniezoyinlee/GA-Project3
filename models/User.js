@@ -16,6 +16,7 @@ const userSchema = new mongoose.Schema({
     }
 }, {
     timestamps: true,
+    id: false,
     toJSON: {
         virtuals: true,
         transform: (_doc, ret) => {
