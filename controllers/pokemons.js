@@ -12,6 +12,7 @@ const router = express.Router();
 
 // INDEX
 router.get('/', (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   Pokemon.find()
     .populate("owner", "email -_id")
     .then((pokemons) => res.json(pokemons))
@@ -32,9 +33,9 @@ router.get('/:id', handleValidateId, (req, res, next) => {
 // CREATE
 router.post('/', requireToken, (req, res, next) => {
   Pokemon.create({
-      ...req.body,
-      owner: req.user._id
-    })
+    ...req.body,
+    owner: req.user._id
+  })
     .then((pokemon) => res.status(201).json(pokemon))
     .catch(next);
 });
