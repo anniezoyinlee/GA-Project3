@@ -7,8 +7,6 @@ const {
 
 const router = express.Router();
 
-const router = express.Router();
-
 // SIGN UP
 router.post('/signup', (req, res, next) => {
   bcrypt
