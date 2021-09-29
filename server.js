@@ -42,6 +42,7 @@ app.use(cors(corsOptions))
 // Sample homepage
 app.get("/", (req, res, next) => {
     Pokemon.deleteMany()
+    console.log(seedData)
         .then(() => Pokemon.insertMany(seedData))
         .then(() => Pokemon.updateMany({}, {
             "$set": {
