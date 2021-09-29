@@ -2,14 +2,14 @@
     {
         "name": "Pikachu",
         "description": "An electric mouse.",
-        "price": 1000,
-        "image": "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2021/06/Pikachu-color-model-publicity-cel.jpg"
+        "price": 999,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png"
     },
     {
         "name": "Charizard",
         "description": "Giant fire lizard dragon",
-        "price": 1000,
-        "image": "https://www.serebii.net/pokemonunite/pokemon/006.png"
+        "price": 8409,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png"
     },
     {
         "name": "Squirtle",
@@ -48,11 +48,27 @@
         "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"
     },
     {
-        "name": "Meowthr",
+        "name": "Meowth",
         "description": "A money cat; May or may not be able to talk",
         "price": 25,
         "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
+    },
+    {
+        "name": "Blastoise",
+        "description": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
+        "price": 500,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+    },
+    {
+        "name": "Raichu",
+        "description": "Its long tail serves as a ground to protect itself from its own high-voltage power.",
+        "price": 1300,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png"
+    },
+    {
+        "name": "Nidoqueen",
+        "description": "Nidoqueen is better at defense than offense. With scales like armor, this Pokémon will shield its children from any kind of attack.",
+        "price": 1700,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png"
     }
-    
-
 ]
