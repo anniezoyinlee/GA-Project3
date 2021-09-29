@@ -14,8 +14,44 @@
     {
         "name": "Squirtle",
         "description": "A cute blue turtle with some sick shades",
+        "price": 500,
+        "image": "https://studio.cults3d.com/DePEvZk4Aj3OrFEAjTb6qfurv18=/516x516/https://files.cults3d.com/uploaders/17709429/illustration-file/ad65b362-37a4-466f-9adf-43f96f007f84/png-clipart-pikachu-squirtle-pokemon-poke-ball-bulbasaur-pikachu-mammal-vertebrate.png"
+    },
+    {
+        "name": "Bulbasaur",
+        "description": "A tiny dinosaur with a plant on its back",
+        "price": 750,
+        "image": "https://cdn2.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png"
+    },
+    {
+        "name": "Butterfree",
+        "description": "The Butterfly Pokemon",
+        "price": 1000,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+    },
+    {
+        "name": "Ekans",
+        "description": "Poisonous purple snake",
+        "price": 250,
+        "image": "https://cdn2.bulbagarden.net/upload/f/fa/023Ekans.png"
+    },
+    {
+        "name": "Beedrill",
+        "description": "A very disrespectful bug Pokemon with massive stingers",
         "price": 25,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
+        "image": "https://img.pokemondb.net/artwork/large/beedrill.jpg"
+    },
+    {
+        "name": "Jigglypuff",
+        "description": "Gentle pink ball with a lovely singing voice",
+        "price": 25,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"
+    },
+    {
+        "name": "Meowth",
+        "description": "A money cat; May or may not be able to talk",
+        "price": 25,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
     },
     {
         "name": "Blastoise",
