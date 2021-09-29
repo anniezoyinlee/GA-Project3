@@ -14,6 +14,7 @@
     {
         "name": "Squirtle",
         "description": "A cute blue turtle with some sick shades",
+<<<<<<< HEAD
         "price": 500,
         "image": "https://studio.cults3d.com/DePEvZk4Aj3OrFEAjTb6qfurv18=/516x516/https://files.cults3d.com/uploaders/17709429/illustration-file/ad65b362-37a4-466f-9adf-43f96f007f84/png-clipart-pikachu-squirtle-pokemon-poke-ball-bulbasaur-pikachu-mammal-vertebrate.png"
     },
@@ -52,6 +53,10 @@
         "description": "A money cat; May or may not be able to talk",
         "price": 25,
         "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
+=======
+        "price": 25,
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
+>>>>>>> 6a587cd0f2da5a39c62e31488d3b151f6e8010ff
     },
     {
         "name": "Blastoise",
