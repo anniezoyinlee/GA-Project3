@@ -15,6 +15,7 @@ const pokemonSchema = new mongoose.Schema({
     },
     image: {
         type: String,
+        default: 'https://freepngimg.com/thumb/pokemon/20118-5-pokemon.png',
         required: true
     },
     owner: {
