@@ -1,19 +1,30 @@
 # General Assembly - Project 3
 
+## Table of Contents
+* [Project Name](#project-name)
+* [Project Description](#project-description)
+* [Team Members](#team-members)
+* [Requirements](#requirements)
+* [Features](#features)
+* [Wireframe](#wireframe)
+* [User Stories](#user-stories)
+* [Workflow](#workflow)
+* [Version History](#version-history)
+
 ## Project Name
 PokeMon Sanctuary
 >[Click to check the app!](https://pokemon-sanctuary.herokuapp.com/)
 
-## Scrum master
-Trent Sanders
-
-## Team Members
-Annie Lee  
-Christina Whether  
-Safa Nasirli
-
 ## Project Description
 Our team set out to make an E-commerce app for a Pokemon adoption agency. The app is intended for general populace consumption, catering to all ages.
+
+
+## Team Members
+Annie Lee -Fullstack Developer
+Christina Whethers - Lead BackEnd Developer
+Safa Nasirli - Lead FrontEnd Developer
+Trent Sanders - Scrum Master
+
 
 ## Requirements
 There are no requirements for this project
@@ -81,3 +92,7 @@ As a User I want:
 9/28/2021 - Connected backend to frontend
 9/29/2021 - Installed CORS for error prevention
 9/30/2021 -
+
+## Version History
+* 0.1 
+    * Initial Release
