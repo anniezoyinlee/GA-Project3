@@ -89,13 +89,13 @@ As a User I want:
 * Each card has an interactive link to the Description page
 
 ## Workflow
-9/24/2021 - Scaffold BackEnd, created models for Schema, 
-9/26/2021 - Created Seed data, configured server, started heroku deployment process, Updated ReadMe
-9/27/2021 - Created Password encryption, updated Error handling, Install packages necessary for project 
-9/28/2021 - Connected backend to frontend
-9/29/2021 - Installed CORS for error prevention
-9/30/2021 -
-10/1/2021 - Presentation
+* 9/24/2021 - Scaffold BackEnd, created models for Schema, 
+* 9/26/2021 - Created Seed data, configured server, started heroku deployment process, Updated ReadMe
+* 9/27/2021 - Created Password encryption, updated Error handling, Install packages necessary for project 
+* 9/28/2021 - Connected backend to frontend
+* 9/29/2021 - Installed CORS for error prevention
+* 9/30/2021 -
+* 10/1/2021 - Presentation
 
 ## Version History
 * 0.1 
