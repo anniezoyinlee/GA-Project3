@@ -12,7 +12,7 @@ const router = express.Router();
 
 // INDEX
 router.get('/', (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://powerful-taiga-16157.herokuapp.com/')
+  res.setHeader('Access-Control-Allow-Origin', 'https://powerful-taiga-16157.herokuapp.com')
   Pokemon.find()
     .populate("owner", "email -_id")
     .then((pokemons) => res.json(pokemons))
@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
 
 // SHOW
 router.get('/:id', handleValidateId, (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://powerful-taiga-16157.herokuapp.com/')
+  res.setHeader('Access-Control-Allow-Origin', 'https://powerful-taiga-16157.herokuapp.com')
   Pokemon.findById(req.params.id)
     .populate("owner")
     .then(handleRecordExists)
@@ -33,7 +33,7 @@ router.get('/:id', handleValidateId, (req, res, next) => {
 
 // CREATE
 router.post('/', (req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com/")
+  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com")
   Pokemon.create({
       ...req.body,
       owner: req.user._id
@@ -44,7 +44,7 @@ router.post('/', (req, res, next) => {
 
 // UPDATE
 router.put('/:id', handleValidateId, (req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com/")
+  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com")
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
     .then((pokemon) => handleValidateOwnership(req, pokemon))
@@ -57,7 +57,7 @@ router.put('/:id', handleValidateId, (req, res, next) => {
 
 // DESTROY
 router.delete('/:id', handleValidateId, (req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com/")
+  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com")
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
     .then((pokemon) => handleValidateOwnership(req, pokemon))
