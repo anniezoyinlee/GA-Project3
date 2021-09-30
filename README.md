@@ -16,23 +16,26 @@ PokeMon Sanctuary
 >[Click to check the app!](https://pokemon-sanctuary.herokuapp.com/)
 
 ## Project Description
-Our team set out to make an E-commerce app for a Pokemon adoption agency. The app is intended for general populace consumption, catering to all ages.
-
+Hi! Welcome to our project: PokeMon Sanctuary. This project was designed to test/reinforce our MERN/CRUD understanding in a group setting. We decided that
+a E-commerce app simulating the purchase of PokeMon from an adoption agency would be the best way to demonstrate our knowledge. Each team was assigned roles
+split evenly between FrontEnd and BackEnd development to ensure even workflow. Credits to all those who contributed.
 
 ## Team Members
-Annie Lee -Fullstack Developer
-Christina Whethers - Lead BackEnd Developer
-Safa Nasirli - Lead FrontEnd Developer
-Trent Sanders - Scrum Master
+[Annie Lee](https://github.com/anniezoyinlee) - Fullstack Developer
 
+[Christina Whethers](https://github.com/Flandolly) - Lead BackEnd Developer
+
+[Safa Nasirli](https://github.com/safanasirli) - Lead FrontEnd Developer
+
+[Trent Sanders](https://github.com/MrGoodBurger) - Scrum Leader
 
 ## Requirements
-There are no requirements for this project
+There are no requirements for this project.
 
 ## Features
-MERN(Mongodb, ExpressAPI, Reactjs, Node)
-Mongoose
-Heroku
+[MERN](https://www.mongodb.com/mern-stack)([Mongodb](https://www.mongodb.com/),[Expressjs](https://expressjs.com/),[Reactjs](https://reactjs.org/),[Nodejs](https://nodejs.org/en/))
+[Mongoose](https://mongoosejs.com/)
+[Heroku](https://www.heroku.com/home)
 User Authentication
 
 ## Models and Properties
@@ -92,6 +95,7 @@ As a User I want:
 9/28/2021 - Connected backend to frontend
 9/29/2021 - Installed CORS for error prevention
 9/30/2021 -
+10/1/2021 - Presentation
 
 ## Version History
 * 0.1 
