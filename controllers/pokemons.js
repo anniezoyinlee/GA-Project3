@@ -1,10 +1,5 @@
 const express = require('express');
 const Pokemon = require('../models/Pokemon');
-const {
-  handleValidateId,
-  handleRecordExists,
-  handleValidateOwnership
-} = require('../middleware/custom_errors');
 const router = express.Router();
 
 // INDEX
@@ -15,9 +10,8 @@ router.get('/', (req, res, next) => {
 });
 
 // SHOW
-router.get('/:id', handleValidateId, (req, res, next) => {
+router.get('/:id', (req, res, next) => {
   Pokemon.findById(req.params.id)
-    .then(handleRecordExists)
     .then((pokemon) => {
       res.json(pokemon);
     })
@@ -32,10 +26,8 @@ router.post('/', (req, res, next) => {
 });
 
 // UPDATE
-router.put('/:id', handleValidateId, (req, res, next) => {
+router.put('/:id', (req, res, next) => {
   Pokemon.findById(req.params.id)
-    .then(handleRecordExists)
-    .then((pokemon) => handleValidateOwnership(req, pokemon))
     .then((pokemon) => pokemon.set(req.body).save())
     .then((pokemon) => {
       res.json(pokemon)
@@ -44,10 +36,8 @@ router.put('/:id', handleValidateId, (req, res, next) => {
 });
 
 // DESTROY
-router.delete('/:id', handleValidateId, (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
   Pokemon.findById(req.params.id)
-    .then(handleRecordExists)
-    .then((pokemon) => handleValidateOwnership(req, pokemon))
     .then((pokemon) => pokemon.remove())
     .then((pokemon) => {
       res.json(pokemon)
