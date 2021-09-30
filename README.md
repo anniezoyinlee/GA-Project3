@@ -15,6 +15,15 @@ Safa Nasirli
 ## Project Description
 Our team set out to make an E-commerce app for a Pokemon adoption agency. The app is intended for general populace consumption, catering to all ages.
 
+## Requirements
+There are no requirements for this project
+
+## Features
+MERN(Mongodb, ExpressAPI, Reactjs, Node)
+Mongoose
+Heroku
+User Authentication
+
 ## Models and Properties
 User
 ```
@@ -69,6 +78,6 @@ As a User I want:
 9/24/2021 - Scaffold BackEnd, created models for Schema, 
 9/26/2021 - Created Seed data, configured server, started heroku deployment process, Updated ReadMe
 9/27/2021 - Created Password encryption, updated Error handling, Install packages necessary for project 
-9/28/2021 - Connected backend to frontend,
-9/29/2021 - Installed CORS for error prevention,
+9/28/2021 - Connected backend to frontend
+9/29/2021 - Installed CORS for error prevention
 9/30/2021 -
