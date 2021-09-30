@@ -65,14 +65,10 @@ As a User I want:
 * Each card has a unique pokemon
 * Each card has an interactive link to the Description page
 
-Landing Page includes:
-* Multiple pokemon image ‘cards’,
-* Each card is interactive
-* Each card has CSS for animations
-* Stretch: page navigation mark
-
-The Description page includes :
-* Reviews
-* Pokemon Image
-* Pokemon Bio/Desc
-* Pokemon Price
+## Workflow
+9/24/2021 - Scaffold BackEnd, created models for Schema, 
+9/26/2021 - Created Seed data, configured server, started heroku deployment process, Updated ReadMe
+9/27/2021 - Created Password encryption, updated Error handling, Install packages necessary for project 
+9/28/2021 - Connected backend to frontend,
+9/29/2021 - Installed CORS for error prevention,
+9/30/2021 -
