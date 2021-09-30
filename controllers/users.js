@@ -9,6 +9,7 @@ const router = express.Router();
 
 // SIGN UP
 router.post('/signup', (req, res, next) => {
+  console.log('route hit')
   bcrypt
     .hash(req.body.password, 10)
     .then(hash =>
