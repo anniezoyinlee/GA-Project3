@@ -1,4 +1,4 @@
-# General Assembly - Project 3
+# General Assembly - Project 3(BackEnd)
 
 ## Table of Contents
 * [Project Name](#project-name)
@@ -16,23 +16,35 @@ PokeMon Sanctuary
 >[Click to check the app!](https://pokemon-sanctuary.herokuapp.com/)
 
 ## Project Description
-Our team set out to make an E-commerce app for a Pokemon adoption agency. The app is intended for general populace consumption, catering to all ages.
+Hi! Welcome to our project: PokeMon Sanctuary. This project was designed to test/reinforce our MERN/CRUD understanding in a group setting. We decided that
+a E-commerce app simulating the purchase of PokeMon from an adoption agency would be the best way to demonstrate our knowledge in a unique way. 
 
+The app is comprised of: a landing page with cards displaying the PokeMon up for adoption, a Nav bar that routes to other pages renders in the app, and interactive cards
+thats redirect the user to the PokeMon's price and description when clicked.
+
+Each team was assigned role split evenly between FrontEnd and BackEnd development to ensure even workflow. 
+
+Credits to all those who contributed.
 
 ## Team Members
-Annie Lee -Fullstack Developer
-Christina Whethers - Lead BackEnd Developer
-Safa Nasirli - Lead FrontEnd Developer
-Trent Sanders - Scrum Master
+[Annie Lee](https://github.com/anniezoyinlee) - Fullstack Developer
 
+[Christina Whethers](https://github.com/Flandolly) - Lead BackEnd Developer
+
+[Safa Nasirli](https://github.com/safanasirli) - Lead FrontEnd Developer
+
+[Trent Sanders](https://github.com/MrGoodBurger) - Scrum Leader
 
 ## Requirements
-There are no requirements for this project
+There are no requirements for this project.
 
 ## Features
-MERN(Mongodb, ExpressAPI, Reactjs, Node)
-Mongoose
-Heroku
+[MERN](https://www.mongodb.com/mern-stack)([Mongodb](https://www.mongodb.com/), [Expressjs](https://expressjs.com/), [Reactjs](https://reactjs.org/), [Nodejs](https://nodejs.org/en/))
+
+[Mongoose](https://mongoosejs.com/)
+
+[Heroku](https://www.heroku.com/home)
+
 User Authentication
 
 ## Models and Properties
@@ -86,12 +98,13 @@ As a User I want:
 * Each card has an interactive link to the Description page
 
 ## Workflow
-9/24/2021 - Scaffold BackEnd, created models for Schema, 
-9/26/2021 - Created Seed data, configured server, started heroku deployment process, Updated ReadMe
-9/27/2021 - Created Password encryption, updated Error handling, Install packages necessary for project 
-9/28/2021 - Connected backend to frontend
-9/29/2021 - Installed CORS for error prevention
-9/30/2021 -
+* 9/24/2021 - Scaffold BackEnd, created models for Schema, 
+* 9/26/2021 - Created Seed data, configured server, started heroku deployment process, Updated ReadMe
+* 9/27/2021 - Created Password encryption, updated Error handling, Install packages necessary for project 
+* 9/28/2021 - Connected backend to frontend
+* 9/29/2021 - Installed CORS for error prevention
+* 9/30/2021 -
+* 10/1/2021 - Presentation
 
 ## Version History
 * 0.1 

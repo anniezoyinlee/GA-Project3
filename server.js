@@ -15,18 +15,8 @@ const {
     handleValidationErrors
 } = require('./middleware/custom_errors');
 
-// middleware
-app.use(express.json());
-app.use(express.urlencoded({
-    extended: true
-}));
-
-// Configure the route middleware
-app.use('/api', userController);
-app.use('/api/pokemons', pokemonController);
-
 // cors
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3000', "https://powerful-taiga-16157.herokuapp.com/"]
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
@@ -37,7 +27,19 @@ const corsOptions = {
     }
 }
 
-app.use(cors(corsOptions))
+app.use(cors())
+
+// middleware
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
+
+// Configure the route middleware
+app.use('/api', userController);
+app.use('/api/pokemons', pokemonController);
+
+
 
 // Sample homepage
 app.get("/", (req, res, next) => {

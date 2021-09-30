@@ -1,7 +1,4 @@
 const express = require('express');
-const {
-  requireToken
-} = require('../middleware/auth');
 const Pokemon = require('../models/Pokemon');
 const {
   handleValidateId,
@@ -12,18 +9,14 @@ const router = express.Router();
 
 // INDEX
 router.get('/', (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
   Pokemon.find()
-    .populate("owner", "email -_id")
     .then((pokemons) => res.json(pokemons))
     .catch(next)
 });
 
 // SHOW
 router.get('/:id', handleValidateId, (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
   Pokemon.findById(req.params.id)
-    .populate("owner")
     .then(handleRecordExists)
     .then((pokemon) => {
       res.json(pokemon);
@@ -32,18 +25,14 @@ router.get('/:id', handleValidateId, (req, res, next) => {
 });
 
 // CREATE
-router.post('/', requireToken, (req, res, next) => {
-  Pokemon.create({
-    ...req.body,
-    owner: req.user._id
-  })
+router.post('/', (req, res, next) => {
+  Pokemon.create(req.body)
     .then((pokemon) => res.status(201).json(pokemon))
     .catch(next);
 });
 
 // UPDATE
-router.put('/:id', handleValidateId, requireToken, (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
+router.put('/:id', handleValidateId, (req, res, next) => {
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
     .then((pokemon) => handleValidateOwnership(req, pokemon))
@@ -55,7 +44,7 @@ router.put('/:id', handleValidateId, requireToken, (req, res, next) => {
 });
 
 // DESTROY
-router.delete('/:id', handleValidateId, requireToken, (req, res, next) => {
+router.delete('/:id', handleValidateId, (req, res, next) => {
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
     .then((pokemon) => handleValidateOwnership(req, pokemon))
