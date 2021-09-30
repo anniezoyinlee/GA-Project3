@@ -33,7 +33,7 @@ split evenly between FrontEnd and BackEnd development to ensure even workflow. C
 There are no requirements for this project.
 
 ## Features
-[MERN](https://www.mongodb.com/mern-stack)([Mongodb](https://www.mongodb.com/),[Expressjs](https://expressjs.com/),[Reactjs](https://reactjs.org/),[Nodejs](https://nodejs.org/en/))
+[MERN](https://www.mongodb.com/mern-stack)([Mongodb](https://www.mongodb.com/), [Expressjs](https://expressjs.com/), [Reactjs](https://reactjs.org/), [Nodejs](https://nodejs.org/en/))
 [Mongoose](https://mongoosejs.com/)
 [Heroku](https://www.heroku.com/home)
 User Authentication
