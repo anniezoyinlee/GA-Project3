@@ -17,8 +17,14 @@ PokeMon Sanctuary
 
 ## Project Description
 Hi! Welcome to our project: PokeMon Sanctuary. This project was designed to test/reinforce our MERN/CRUD understanding in a group setting. We decided that
-a E-commerce app simulating the purchase of PokeMon from an adoption agency would be the best way to demonstrate our knowledge. Each team was assigned roles
-split evenly between FrontEnd and BackEnd development to ensure even workflow. Credits to all those who contributed.
+a E-commerce app simulating the purchase of PokeMon from an adoption agency would be the best way to demonstrate our knowledge in a unique way. 
+
+The app is comprised of: a landing page with cards displaying the PokeMon up for adoption, a Nav bar that routes to other pages renders in the app, and interactive cards
+thats redirect the user to the PokeMon's price and description when clicked.
+
+Each team was assigned role split evenly between FrontEnd and BackEnd development to ensure even workflow. 
+
+Credits to all those who contributed.
 
 ## Team Members
 [Annie Lee](https://github.com/anniezoyinlee) - Fullstack Developer
