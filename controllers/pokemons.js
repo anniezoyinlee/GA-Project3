@@ -1,7 +1,4 @@
 const express = require('express');
-const {
-  requireToken
-} = require('../middleware/auth');
 const Pokemon = require('../models/Pokemon');
 const {
   handleValidateId,
@@ -12,7 +9,6 @@ const router = express.Router();
 
 // INDEX
 router.get('/', (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://powerful-taiga-16157.herokuapp.com')
   Pokemon.find()
     .then((pokemons) => res.json(pokemons))
     .catch(next)
@@ -20,7 +16,6 @@ router.get('/', (req, res, next) => {
 
 // SHOW
 router.get('/:id', handleValidateId, (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://powerful-taiga-16157.herokuapp.com')
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
     .then((pokemon) => {
@@ -31,7 +26,6 @@ router.get('/:id', handleValidateId, (req, res, next) => {
 
 // CREATE
 router.post('/', (req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com")
   Pokemon.create(req.body)
     .then((pokemon) => res.status(201).json(pokemon))
     .catch(next);
@@ -39,7 +33,6 @@ router.post('/', (req, res, next) => {
 
 // UPDATE
 router.put('/:id', handleValidateId, (req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com")
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
     .then((pokemon) => handleValidateOwnership(req, pokemon))
@@ -52,7 +45,6 @@ router.put('/:id', handleValidateId, (req, res, next) => {
 
 // DESTROY
 router.delete('/:id', handleValidateId, (req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com")
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
     .then((pokemon) => handleValidateOwnership(req, pokemon))
