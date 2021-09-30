@@ -32,18 +32,18 @@ router.get('/:id', handleValidateId, (req, res, next) => {
 });
 
 // CREATE
-router.post('/', requireToken, (req, res, next) => {
+router.post('/', (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000")
   Pokemon.create({
-    ...req.body,
-    owner: req.user._id
-  })
+      ...req.body,
+      owner: req.user._id
+    })
     .then((pokemon) => res.status(201).json(pokemon))
     .catch(next);
 });
 
 // UPDATE
-router.put('/:id', handleValidateId, requireToken, (req, res, next) => {
+router.put('/:id', handleValidateId, (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000")
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
@@ -56,7 +56,7 @@ router.put('/:id', handleValidateId, requireToken, (req, res, next) => {
 });
 
 // DESTROY
-router.delete('/:id', handleValidateId, requireToken, (req, res, next) => {
+router.delete('/:id', handleValidateId, (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000")
   Pokemon.findById(req.params.id)
     .then(handleRecordExists)
