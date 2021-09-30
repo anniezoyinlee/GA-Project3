@@ -14,7 +14,6 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://powerful-taiga-16157.herokuapp.com')
   Pokemon.find()
-    .populate("owner", "email -_id")
     .then((pokemons) => res.json(pokemons))
     .catch(next)
 });
@@ -23,7 +22,6 @@ router.get('/', (req, res, next) => {
 router.get('/:id', handleValidateId, (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://powerful-taiga-16157.herokuapp.com')
   Pokemon.findById(req.params.id)
-    .populate("owner")
     .then(handleRecordExists)
     .then((pokemon) => {
       res.json(pokemon);
@@ -34,10 +32,7 @@ router.get('/:id', handleValidateId, (req, res, next) => {
 // CREATE
 router.post('/', (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "https://powerful-taiga-16157.herokuapp.com")
-  Pokemon.create({
-      ...req.body,
-      owner: req.user._id
-    })
+  Pokemon.create(req.body)
     .then((pokemon) => res.status(201).json(pokemon))
     .catch(next);
 });
