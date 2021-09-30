@@ -16,7 +16,7 @@ const {
 } = require('./middleware/custom_errors');
 
 // cors
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3000', "https://powerful-taiga-16157.herokuapp.com/"]
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
@@ -27,7 +27,7 @@ const corsOptions = {
     }
 }
 
-app.use(cors(corsOptions))
+app.use(cors())
 
 // middleware
 app.use(express.json());
