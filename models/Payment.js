@@ -1,3 +1,4 @@
+// For future update, no feature in frontend yet
 const mongoose = require("../database/connection");
 
 const paymentSchema = new mongoose.Schema({
@@ -13,8 +14,6 @@ const paymentSchema = new mongoose.Schema({
     type: Array,
     default: []
    }
-
-
 }, { timestamps: true })
 
 module.exports = mongoose.model("Payment", paymentSchema);

@@ -1,3 +1,4 @@
+// For future update, no feature in frontend yet
 const mongoose = require("../database/connection");
 
 const userSchema = new mongoose.Schema({
