@@ -5,43 +5,43 @@ const jwt = require("jsonwebtoken")
 const secret = process.env.JWT_SECRET || "Random string value"
 
 const {
-    Strategy,
-    ExtractJwt
+	Strategy,
+	ExtractJwt
 } = require("passport-jwt")
 const options = {
-    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey: secret
+	jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+	secretOrKey: secret
 }
 
 const User = require("../models/User")
 
 const strategy = new Strategy(options, function (jwt_payload, done) {
-    User.findById(jwt_payload.id)
-        .then((user) => done(null, user))
-        .catch((err) => done(err))
+	User.findById(jwt_payload.id)
+		.then((user) => done(null, user))
+		.catch((err) => done(err))
 })
 
 passport.use(strategy)
 passport.initialize()
 
 const requireToken = passport.authenticate("jwt", {
-    session: false
+	session: false
 })
 
 const createUserToken = (req, user) => {
-    if (!user || !req.body.password || !bcrypt.compareSync(req.body.password, user.password)) {
-        const error = new Error("Username or password is incorrect.")
-        error.statusCode = 422
-        throw error
-    }
-    return jwt.sign({
-        id: user._id
-    }, secret, {
-        expiresIn: 36000
-    })
+	if (!user || !req.body.password || !bcrypt.compareSync(req.body.password, user.password)) {
+		const error = new Error("Username or password is incorrect.")
+		error.statusCode = 422
+		throw error
+	}
+	return jwt.sign({
+		id: user._id
+	}, secret, {
+		expiresIn: 36000
+	})
 }
 
 module.exports = {
-    requireToken,
-    createUserToken
+	requireToken,
+	createUserToken
 }
