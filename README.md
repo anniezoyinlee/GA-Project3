@@ -35,9 +35,6 @@ Credits to all those who contributed.
 
 [Trent Sanders](https://github.com/MrGoodBurger) - Scrum Leader
 
-## Requirements
-There are no requirements for this project.
-
 ## Features
 [MERN](https://www.mongodb.com/mern-stack)([Mongodb](https://www.mongodb.com/), [Expressjs](https://expressjs.com/), [Reactjs](https://reactjs.org/), [Nodejs](https://nodejs.org/en/))
 

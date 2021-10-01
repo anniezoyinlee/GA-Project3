@@ -1,3 +1,4 @@
+// For future update, no feature in frontend yet
 const passport = require("passport")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")

@@ -1,3 +1,4 @@
+// For future update, no feature in frontend yet
 const express = require('express');
 const User = require('../models/User');
 const bcrypt = require("bcrypt");
