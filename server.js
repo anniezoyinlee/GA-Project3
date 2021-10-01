@@ -39,8 +39,6 @@ app.use(express.urlencoded({
 app.use('/api', userController);
 app.use('/api/pokemons', pokemonController);
 
-
-
 // Sample homepage
 app.get("/", (req, res, next) => {
     Pokemon.deleteMany()
