@@ -1,74 +1,74 @@
 [
-    {
-        "name": "Pikachu",
-        "description": "An electric mouse.",
-        "price": 999,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png"
-    },
-    {
-        "name": "Charizard",
-        "description": "Giant fire lizard dragon",
-        "price": 8409,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png"
-    },
-    {
-        "name": "Squirtle",
-        "description": "A cute blue turtle with some sick shades",
-        "price": 500,
-        "image": "https://studio.cults3d.com/DePEvZk4Aj3OrFEAjTb6qfurv18=/516x516/https://files.cults3d.com/uploaders/17709429/illustration-file/ad65b362-37a4-466f-9adf-43f96f007f84/png-clipart-pikachu-squirtle-pokemon-poke-ball-bulbasaur-pikachu-mammal-vertebrate.png"
-    },
-    {
-        "name": "Bulbasaur",
-        "description": "A tiny dinosaur with a plant on its back",
-        "price": 750,
-        "image": "https://cdn2.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png"
-    },
-    {
-        "name": "Butterfree",
-        "description": "The Butterfly Pokemon",
-        "price": 1000,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
-    },
-    {
-        "name": "Ekans",
-        "description": "Poisonous purple snake",
-        "price": 250,
-        "image": "https://cdn2.bulbagarden.net/upload/f/fa/023Ekans.png"
-    },
-    {
-        "name": "Beedrill",
-        "description": "A very disrespectful bug Pokemon with massive stingers",
-        "price": 25,
-        "image": "https://img.pokemondb.net/artwork/large/beedrill.jpg"
-    },
-    {
-        "name": "Jigglypuff",
-        "description": "Gentle pink ball with a lovely singing voice",
-        "price": 25,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"
-    },
-    {
-        "name": "Meowth",
-        "description": "A money cat; May or may not be able to talk",
-        "price": 25,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
-    },
-    {
-        "name": "Blastoise",
-        "description": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
-        "price": 500,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
-    },
-    {
-        "name": "Raichu",
-        "description": "Its long tail serves as a ground to protect itself from its own high-voltage power.",
-        "price": 1300,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png"
-    },
-    {
-        "name": "Nidoqueen",
-        "description": "Nidoqueen is better at defense than offense. With scales like armor, this Pokémon will shield its children from any kind of attack.",
-        "price": 1700,
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png"
-    }
+	{
+		"name": "Pikachu",
+		"description": "An electric mouse.",
+		"price": 999,
+		"image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png"
+	},
+	{
+		"name": "Charizard",
+		"description": "Giant fire lizard dragon",
+		"price": 8409,
+		"image": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png"
+	},
+	{
+		"name": "Squirtle",
+		"description": "A cute blue turtle with some sick shades",
+		"price": 500,
+		"image": "https://studio.cults3d.com/DePEvZk4Aj3OrFEAjTb6qfurv18=/516x516/https://files.cults3d.com/uploaders/17709429/illustration-file/ad65b362-37a4-466f-9adf-43f96f007f84/png-clipart-pikachu-squirtle-pokemon-poke-ball-bulbasaur-pikachu-mammal-vertebrate.png"
+	},
+	{
+		"name": "Bulbasaur",
+		"description": "A tiny dinosaur with a plant on its back",
+		"price": 750,
+		"image": "https://cdn2.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png"
+	},
+	{
+		"name": "Butterfree",
+		"description": "The Butterfly Pokemon",
+		"price": 1000,
+		"image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+	},
+	{
+		"name": "Ekans",
+		"description": "Poisonous purple snake",
+		"price": 250,
+		"image": "https://cdn2.bulbagarden.net/upload/f/fa/023Ekans.png"
+	},
+	{
+		"name": "Beedrill",
+		"description": "A very disrespectful bug Pokemon with massive stingers",
+		"price": 25,
+		"image": "https://img.pokemondb.net/artwork/large/beedrill.jpg"
+	},
+	{
+		"name": "Jigglypuff",
+		"description": "Gentle pink ball with a lovely singing voice",
+		"price": 25,
+		"image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"
+	},
+	{
+		"name": "Meowth",
+		"description": "A money cat; May or may not be able to talk",
+		"price": 25,
+		"image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
+	},
+	{
+		"name": "Blastoise",
+		"description": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
+		"price": 500,
+		"image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+	},
+	{
+		"name": "Raichu",
+		"description": "Its long tail serves as a ground to protect itself from its own high-voltage power.",
+		"price": 1300,
+		"image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png"
+	},
+	{
+		"name": "Nidoqueen",
+		"description": "Nidoqueen is better at defense than offense. With scales like armor, this Pokémon will shield its children from any kind of attack.",
+		"price": 1700,
+		"image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png"
+	}
 ]
