@@ -3,6 +3,7 @@
 ## Table of Contents
 * [Project Name](#project-name)
 * [Project Description](#project-description)
+* [Project Repositories](#project-repositories-links)
 * [Team Members](#team-members)
 * [Requirements](#requirements)
 * [Features](#features)
@@ -15,12 +16,16 @@
 PokeMon Sanctuary
 >[Click to check the app!](https://pokemon-sanctuary.herokuapp.com/)
 
+## Project Repositories Links
+[FrontEnd](https://github.com/safanasirli/pokemon-sanctuary-frontend)
+
+[BackEnd](https://github.com/anniezoyinlee/pokemon-sanctuary-backend)
+
 ## Project Description
 Hi! Welcome to our project: PokeMon Sanctuary. This project was designed to test/reinforce our MERN/CRUD understanding in a group setting. We decided that
-a E-commerce app simulating the purchase of PokeMon from an adoption agency would be the best way to demonstrate our knowledge in a unique way. 
+a E-commerce app simulating the admin role of a PokeMon adoption agency would be the best way to demonstrate our knowledge in a unique way. 
 
-The app is comprised of: a landing page with cards displaying the PokeMon up for adoption, a Nav bar that routes to other pages renders in the app, and interactive cards
-thats redirect the user to the PokeMon's price and description when clicked.
+The app is comprised of: a landing page with cards displaying the PokeMon up for adoption, features that allow the user to Create, Delete, and Update the pokemon, as well as interactive cards that redirect the user to the PokeMon's price description page when clicked.
 
 Each team was assigned role split evenly between FrontEnd and BackEnd development to ensure even workflow. 
 
@@ -100,7 +105,7 @@ As a User I want:
 * 9/27/2021 - Created Password encryption, updated Error handling, Install packages necessary for project 
 * 9/28/2021 - Connected backend to frontend
 * 9/29/2021 - Installed CORS for error prevention
-* 9/30/2021 -
+* 9/30/2021 - Completed Heroku deployment, organized code
 * 10/1/2021 - Presentation
 
 ## Version History
