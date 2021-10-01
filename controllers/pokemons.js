@@ -27,11 +27,13 @@ router.post('/', (req, res, next) => {
 
 // UPDATE
 router.put('/:id', (req, res, next) => {
-  Pokemon.findById(req.params.id)
-    .then((pokemon) => pokemon.set(req.body).save())
-    .then((pokemon) => {
-      res.json(pokemon)
-    })
+  // Pokemon.findById(req.params.id)
+  //   .then((pokemon) => pokemon.set(req.body).save())
+  //   .then((pokemon) => {
+  //     res.json(pokemon)
+  //   })
+  Pokemon.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+    .then((pokemon) => res.json(pokemon))
     .catch(next);
 });
 
